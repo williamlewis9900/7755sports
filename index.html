@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7755 Sports iD - Berita Bola Indonesia & Prediksi Sepak Bola Terakurat</title>
+  <meta name="description" content="Sumber terpercaya berita bola Indonesia dan prediksi sepak bola terakurat. Informasi Liga 1, Timnas, transfer pemain, dan prediksi pertandingan.">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYF8L99HRqi6q7xOaxO6SsfS3Vr4t2fDKbiKeWZfvwnaunbAqswTbcg4_jI31BOT26zyOBVNpoW0R-YrT_dGUpvEguB_Q8Y2hLY1yV53aqc0MTqNjuIzcbibiPtWpncgiQSziVgFTCoR7ZcaTnBfxkhMDMycOm63hqnQCeezTVchIg5lpEafECls2choo/s1600/f.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #00a651;
+      --green-dark: #007a3c;
+      --green-light: #e6f7ee;
+      --red: #e8001d;
+      --black: #0d0d0d;
+      --dark: #111827;
+      --mid: #374151;
+      --muted: #6b7280;
+      --light: #f3f4f6;
+      --white: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: #f7f8fa;
+      color: var(--dark);
+      line-height: 1.75;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--green-dark);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 0;
+      text-align: center;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--black);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.45);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+    }
+    .logo img {
+      height: 48px;
+      display: block;
+    }
+    nav {
+      display: flex;
+      gap: 4px;
+    }
+    nav a {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #ccc;
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 3px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: var(--green); color: #fff; }
+
+    /* ── HERO BANNER ── */
+    .hero {
+      background: linear-gradient(135deg, #0d0d0d 0%, #1a2e1a 50%, #0d2010 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+      border-bottom: 4px solid var(--green);
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(26px, 4vw, 46px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      max-width: 780px;
+      margin: 0 auto 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .hero h1 span { color: var(--green); }
+    .hero p {
+      font-size: 16px;
+      color: #9ca3af;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ── ARTICLE WRAPPER ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── PAGE CARDS ── */
+    .page-card {
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 44px 52px;
+      margin-bottom: 48px;
+      position: relative;
+      border-top: 4px solid var(--green);
+    }
+    .page-card + .page-card {
+      margin-top: 0;
+    }
+    .page-label {
+      position: absolute;
+      top: -1px;
+      right: 32px;
+      background: var(--green);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    /* ── TYPOGRAPHY INSIDE CARDS ── */
+    .page-card h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 18px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .page-card h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin: 28px 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green-light);
+    }
+    .page-card p {
+      font-size: 16px;
+      color: var(--mid);
+      margin-bottom: 16px;
+      line-height: 1.85;
+    }
+    .page-card ul {
+      margin: 12px 0 18px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .page-card ul li {
+      font-size: 15px;
+      color: var(--mid);
+      padding: 6px 0 6px 22px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .page-card ul li::before {
+      content: '▸';
+      color: var(--green);
+      position: absolute;
+      left: 0;
+      font-size: 13px;
+      top: 7px;
+    }
+    .page-card ol {
+      margin: 12px 0 18px 0;
+      padding-left: 22px;
+    }
+    .page-card ol li {
+      font-size: 15px;
+      color: var(--mid);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-card ol li strong {
+      color: var(--dark);
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    a {
+      color: var(--green-dark);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid var(--green);
+      transition: color 0.2s;
+    }
+    a:hover { color: var(--red); border-bottom-color: var(--red); }
+
+    /* ── ARTICLE IMAGE ── */
+    .article-img {
+      width: 100%;
+      border-radius: 6px;
+      margin: 24px 0;
+      display: block;
+      object-fit: cover;
+      max-height: 420px;
+    }
+    .img-caption {
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: -14px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    /* ── DIVIDER ── */
+    .page-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 0 48px;
+    }
+    .page-divider::before, .page-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .page-divider span {
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: var(--green-light);
+      border-left: 4px solid var(--green);
+      border-radius: 4px;
+      padding: 18px 22px;
+      margin: 20px 0;
+    }
+    .highlight-box p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--green-dark);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      color: #9ca3af;
+      padding: 56px 24px 32px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-brand img { height: 40px; margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; color: #6b7280; }
+    .footer-col h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green);
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: #6b7280;
+      text-decoration: none;
+      border-bottom: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--green); }
+    .footer-bottom {
+      border-top: 1px solid #1f2937;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: 13px; color: #4b5563; }
+    .footer-badge {
+      display: flex;
+      gap: 8px;
+    }
+    .footer-badge span {
+      background: #1f2937;
+      color: #6b7280;
+      font-family: 'Oswald', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 680px) {
+      .page-card { padding: 28px 22px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      nav { display: none; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">🟢 Update Terbaru Liga 1 &nbsp;|&nbsp; Timnas Indonesia &nbsp;|&nbsp; Prediksi Pertandingan &nbsp;|&nbsp; Transfer Pemain</div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="https://7755sports.id" class="logo">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxMigAgPMFLsjO4JeynWw2nKkH9w8nV-WOptkplXVv2RozfPIvsWc2sj_QfqAnYygSp0JmcSml5UbAV2vrLZenOnv4-lYEiA3NSlR8WLBYeK6BcgkPgpR3yAJuxBH_XAuM7ZJC7V-Jkc6rGY4vO0zbUb25Njpa1OBlpJo074KSyVE0UylAgYRRP9yYdCY/s1600/a.png" alt="7755 Sports iD Logo">
+      </a>
+      <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Liga 1</a>
+        <a href="#">Timnas</a>
+        <a href="#">Prediksi</a>
+        <a href="#">Transfer</a>
+        <a href="#">Internasional</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">Portal Olahraga Terpercaya</div>
+    <h1>7755 Sports iD: Sumber Terpercaya <span>Berita Bola Indonesia</span> dan Prediksi Sepak Bola Terakurat</h1>
+    <p>Informasi lengkap Liga 1, Timnas, transfer pemain, dan prediksi pertandingan setiap hari.</p>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- PAGE 1 -->
+    <article class="page-card">
+      <div class="page-label">Halaman 1</div>
+      <h2>Sumber Terpercaya Berita Bola Indonesia dan Prediksi Sepak Bola Terakurat</h2>
+
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjq25CUikjAq-JLhan_HHGiol4ydkxI3eiH9HxooqNafFZxpKfTEK8JTIFRm7kZzoP1R2CidqwAfB8XmbBPg4S3M-6PkZPG_DfXo34FU3FGH5JEZSO7rIIOGCxO5m7SVINb5tkBJ4yU_BjOeAkAqY09QfQij_wzIVsmz-3xC_wLqk6oAZIkQiIow7PF3TQ/w640-h354/1%20copy.png" alt="Berita Bola Indonesia - 7755 Sports iD" class="article-img">
+      <p class="img-caption">Portal berita sepak bola Indonesia terlengkap dan terpercaya</p>
+
+      <p>Dunia sepak bola di Indonesia terus berkembang dengan sangat pesat. Setiap hari, jutaan penggemar mencari informasi terbaru mengenai pertandingan, transfer pemain, hasil laga, hingga prediksi pertandingan yang akurat. Dalam era digital saat ini, kebutuhan akan platform terpercaya untuk mendapatkan <a href="https://7755sports.id" rel="dofollow"><strong>berita bola indonesia</strong></a>, <a href="https://7755sports.id" rel="dofollow"><strong>berita sepak bola indonesia</strong></a>, serta <a href="https://7755sports.id" rel="dofollow"><strong>prediksi bola indonesia</strong></a> semakin meningkat. Di sinilah 7755 Sports iD hadir sebagai solusi terbaik bagi para pecinta sepak bola tanah air.</p>
+
+      <h3>Perkembangan Sepak Bola Indonesia yang Semakin Populer</h3>
+      <p>Sepak bola telah menjadi olahraga paling populer di Indonesia selama bertahun-tahun. Antusiasme masyarakat terhadap Liga 1 Indonesia, Timnas Indonesia, hingga kompetisi internasional seperti Liga Champions dan Piala Dunia sangat luar biasa. Tidak hanya itu, perkembangan media digital juga membuat akses terhadap <a href="https://7755sports.id" rel="dofollow"><strong>artikel bola indonesia</strong></a> menjadi semakin mudah dan cepat.</p>
+      <p>Kini, penggemar sepak bola tidak hanya ingin mengetahui skor pertandingan saja. Mereka juga ingin mendapatkan analisis mendalam, statistik pemain, berita transfer, hingga prediksi pertandingan yang dapat dipercaya. Oleh karena itu, hadirnya media olahraga digital seperti 7755 Sports iD menjadi sangat penting dalam memenuhi kebutuhan informasi para penggemar sepak bola Indonesia.</p>
+    </article>
+
+    <div class="page-divider"><span>Lanjut ke Halaman 2</span></div>
+
+    <!-- PAGE 2 -->
+    <article class="page-card">
+      <div class="page-label">Halaman 2</div>
+      <h2>7755 Sports iD Sebagai Portal Berita Bola Indonesia Terlengkap</h2>
+
+      <p>Sebagai platform olahraga modern, 7755 Sports iD menghadirkan berbagai informasi lengkap seputar dunia sepak bola. Mulai dari berita terbaru, ulasan pertandingan, jadwal kompetisi, hingga prediksi skor pertandingan tersedia secara lengkap dan mudah diakses.</p>
+      <p>Keunggulan utama dari 7755 Sports iD adalah kualitas kontennya yang selalu update dan relevan. Tim editorial profesional selalu memastikan bahwa setiap informasi yang disajikan akurat dan terpercaya. Hal ini menjadikan platform ini sebagai salah satu sumber utama bagi pencinta berita sepak bola Indonesia.</p>
+
+      <h3>Informasi Liga Indonesia yang Selalu Update</h3>
+      <p>Liga Indonesia selalu menjadi perhatian utama para penggemar sepak bola nasional. Persaingan klub-klub besar seperti Persija Jakarta, Persib Bandung, Persebaya Surabaya, hingga Arema FC selalu menarik untuk diikuti.</p>
+      <p>Melalui 7755 Sports iD, penggemar dapat memperoleh:</p>
+      <ul>
+        <li>Jadwal pertandingan terbaru Liga 1 Indonesia</li>
+        <li>Hasil pertandingan secara real-time</li>
+        <li>Klasemen terkini</li>
+        <li>Statistik pemain dan tim</li>
+        <li>Berita transfer pemain</li>
+        <li>Analisis performa klub</li>
+      </ul>
+      <p>Dengan informasi lengkap tersebut, para penggemar sepak bola tidak akan ketinggalan perkembangan terbaru dari kompetisi sepak bola nasional.</p>
+    </article>
+
+    <div class="page-divider"><span>Lanjut ke Halaman 3</span></div>
+
+    <!-- PAGE 3 -->
+    <article class="page-card">
+      <div class="page-label">Halaman 3</div>
+      <h2>Berita Sepak Bola Indonesia yang Cepat dan Akurat</h2>
+
+      <p>Dalam dunia sepak bola modern, kecepatan informasi menjadi hal yang sangat penting. Banyak penggemar ingin mengetahui perkembangan terbaru hanya beberapa menit setelah pertandingan selesai. Karena itulah, 7755 Sports iD selalu berusaha menghadirkan berita bola Indonesia secara cepat tanpa mengurangi kualitas dan akurasi informasi.</p>
+      <p>Berbagai kategori berita tersedia untuk memenuhi kebutuhan pembaca, seperti:</p>
+
+      <h3>1. Berita Tim Nasional Indonesia</h3>
+      <p>Timnas Indonesia selalu memiliki tempat spesial di hati masyarakat. Mulai dari pertandingan kualifikasi Piala Dunia, Piala AFF, SEA Games, hingga Piala Asia selalu menjadi sorotan utama.</p>
+      <p>Di 7755 Sports iD, pembaca dapat menemukan:</p>
+      <ul>
+        <li>Update skuad terbaru Timnas Indonesia</li>
+        <li>Jadwal pertandingan internasional</li>
+        <li>Analisis strategi pelatih</li>
+        <li>Statistik pemain Timnas</li>
+        <li>Prediksi hasil pertandingan</li>
+      </ul>
+
+      <h3>2. Berita Transfer Pemain</h3>
+      <p>Transfer pemain selalu menjadi topik hangat dalam dunia sepak bola. Rumor perpindahan pemain, negosiasi kontrak, hingga kepastian transfer selalu menarik perhatian penggemar.</p>
+      <p>Melalui portal ini, penggemar dapat memperoleh informasi transfer terbaru baik dari liga domestik maupun kompetisi internasional.</p>
+    </article>
+
+    <div class="page-divider"><span>Lanjut ke Halaman 4</span></div>
+
+    <!-- PAGE 4 -->
+    <article class="page-card">
+      <div class="page-label">Halaman 4</div>
+      <h3>3. Berita Kompetisi Internasional</h3>
+      <p>Selain fokus pada sepak bola nasional, 7755 Sports iD juga menghadirkan berita dari berbagai liga top dunia seperti:</p>
+      <ul>
+        <li>Liga Inggris</li>
+        <li>Liga Spanyol</li>
+        <li>Liga Italia</li>
+        <li>Liga Champions</li>
+        <li>Bundesliga</li>
+        <li>Ligue 1</li>
+      </ul>
+      <p>Dengan cakupan berita yang luas, platform ini menjadi pilihan ideal untuk mendapatkan artikel bola Indonesia dan internasional dalam satu tempat.</p>
+
+      <h2>Prediksi Bola Indonesia yang Profesional dan Akurat</h2>
+      <p>Salah satu fitur unggulan dari 7755 Sports iD adalah layanan <a href="https://7755sports.id" rel="dofollow"><strong>prediksi sepak bola indonesia</strong></a> yang dibuat berdasarkan analisis mendalam. Prediksi pertandingan tidak dibuat secara sembarangan, melainkan menggunakan berbagai data statistik dan performa tim terkini.</p>
+
+      <h3>Faktor yang Digunakan Dalam Prediksi</h3>
+      <p>Untuk menghasilkan prediksi sepak bola Indonesia yang berkualitas, beberapa faktor penting selalu dianalisis, seperti:</p>
+      <ul>
+        <li>Performa lima pertandingan terakhir</li>
+        <li>Statistik head to head</li>
+        <li>Kondisi pemain dan cedera</li>
+        <li>Faktor kandang dan tandang</li>
+        <li>Strategi pelatih</li>
+        <li>Produktivitas gol tim</li>
+      </ul>
+      <p>Dengan pendekatan analitis tersebut, pembaca dapat memperoleh gambaran yang lebih akurat mengenai peluang kemenangan sebuah tim.</p>
+    </article>
+
+    <div class="page-divider"><span>Lanjut ke Halaman 5</span></div>
+
+    <!-- PAGE 5 -->
+    <article class="page-card">
+      <div class="page-label">Halaman 5</div>
+      <h2>Prediksi Liga Indonesia & Artikel Bola Indonesia Berkualitas</h2>
+
+      <h3>Prediksi Liga Indonesia</h3>
+      <p>Kompetisi Liga 1 Indonesia sering kali menghadirkan pertandingan yang sulit diprediksi. Namun, tim analis dari 7755 Sports iD mampu memberikan ulasan mendalam mengenai peluang masing-masing tim.</p>
+      <p>Beberapa konten populer meliputi:</p>
+      <ul>
+        <li>Prediksi skor pertandingan</li>
+        <li>Analisis over/under</li>
+        <li>Peluang kemenangan tim</li>
+        <li>Pemain yang berpotensi mencetak gol</li>
+        <li>Analisis taktik pertandingan</li>
+      </ul>
+      <p>Konten seperti ini sangat diminati oleh penggemar yang ingin memahami jalannya pertandingan secara lebih mendalam.</p>
+
+      <h3>Artikel Bola Indonesia Berkualitas Tinggi</h3>
+      <p>Selain berita harian dan prediksi pertandingan, 7755 Sports iD juga menghadirkan berbagai artikel bola Indonesia yang informatif dan edukatif. Artikel-artikel ini membahas berbagai topik menarik seputar dunia sepak bola.</p>
+
+      <h3>Topik Artikel yang Populer</h3>
+      <p>Beberapa kategori artikel yang banyak dibaca antara lain:</p>
+
+      <div class="highlight-box">
+        <p><strong>Sejarah Klub Sepak Bola Indonesia</strong> — Artikel ini membahas perjalanan klub-klub besar Indonesia dari masa ke masa, termasuk prestasi dan rivalitas legendaris.</p>
+      </div>
+    </article>
+
+    <div class="page-divider"><span>Lanjut ke Halaman 6</span></div>
+
+    <!-- PAGE 6 -->
+    <article class="page-card">
+      <div class="page-label">Halaman 6</div>
+      <h2>Topik Artikel Populer & Mengapa Memilih 7755 Sports iD</h2>
+
+      <h3>Profil Pemain Bintang</h3>
+      <p>Pembaca dapat mengenal lebih dekat pemain-pemain terbaik Indonesia maupun pemain internasional melalui artikel profil yang lengkap.</p>
+
+      <h3>Analisis Taktik Sepak Bola</h3>
+      <p>Bagi penggemar yang ingin memahami strategi permainan, artikel analisis taktik menjadi pilihan yang sangat menarik.</p>
+
+      <h3>Perkembangan Sepak Bola Nasional</h3>
+      <p>Topik ini membahas perkembangan infrastruktur, kompetisi usia muda, hingga potensi masa depan sepak bola Indonesia.</p>
+      <p>Dengan kualitas penulisan yang baik dan informatif, 7755 Sports iD berhasil menjadi salah satu media olahraga digital yang paling diminati.</p>
+
+      <h2>Mengapa Memilih 7755 Sports iD?</h2>
+      <p>Ada banyak alasan mengapa para penggemar sepak bola memilih 7755 Sports iD sebagai sumber utama informasi mereka.</p>
+      <ol>
+        <li><strong>Informasi Selalu Update</strong><br>Setiap berita diperbarui secara berkala agar pembaca mendapatkan informasi terbaru dengan cepat.</li>
+        <li><strong>Analisis Mendalam</strong><br>Tidak hanya menyajikan berita biasa, platform ini juga menghadirkan analisis yang membantu pembaca memahami pertandingan secara lebih detail.</li>
+        <li><strong>Tampilan Website Modern</strong><br>Desain website yang responsif membuat pengalaman membaca menjadi nyaman baik melalui desktop maupun smartphone.</li>
+      </ol>
+    </article>
+
+    <div class="page-divider"><span>Lanjut ke Halaman 7</span></div>
+
+    <!-- PAGE 7 -->
+    <article class="page-card">
+      <div class="page-label">Halaman 7</div>
+      <h2>Keunggulan Platform & Peran Media Digital</h2>
+
+      <ol start="4">
+        <li><strong>Konten Lengkap</strong><br>Mulai dari berita sepak bola Indonesia, prediksi pertandingan, hingga artikel analisis tersedia dalam satu platform.</li>
+        <li><strong>Akurat dan Terpercaya</strong><br>Semua informasi yang dipublikasikan telah melalui proses verifikasi sehingga kualitas berita tetap terjaga.</li>
+      </ol>
+
+      <h3>Peran Media Digital Dalam Dunia Sepak Bola Indonesia</h3>
+      <p>Kemajuan teknologi digital memberikan dampak besar terhadap perkembangan sepak bola Indonesia. Kini, informasi dapat diakses kapan saja dan di mana saja hanya melalui smartphone.</p>
+      <p>Media seperti 7755 Sports iD memiliki peran penting dalam:</p>
+      <ul>
+        <li>Menyebarkan informasi sepak bola secara cepat</li>
+        <li>Meningkatkan literasi sepak bola masyarakat</li>
+        <li>Mendukung perkembangan kompetisi nasional</li>
+        <li>Menjadi wadah diskusi penggemar sepak bola</li>
+      </ul>
+      <p>Dengan hadirnya media digital berkualitas, masyarakat Indonesia semakin mudah mengikuti perkembangan sepak bola nasional maupun internasional.</p>
+    </article>
+
+    <div class="page-divider"><span>Lanjut ke Halaman 8</span></div>
+
+    <!-- PAGE 8 -->
+    <article class="page-card">
+      <div class="page-label">Halaman 8</div>
+      <h2>Masa Depan Berita Bola Indonesia & Kesimpulan</h2>
+
+      <h3>Masa Depan Berita Bola Indonesia</h3>
+      <p>Ke depan, kebutuhan akan informasi sepak bola diprediksi akan terus meningkat. Penggemar tidak hanya membutuhkan berita cepat, tetapi juga konten berkualitas yang memberikan nilai tambah.</p>
+      <p>Oleh karena itu, platform seperti 7755 Sports iD perlu terus berinovasi dalam menghadirkan:</p>
+      <ul>
+        <li>Konten video pertandingan</li>
+        <li>Statistik interaktif</li>
+        <li>Live score real-time</li>
+        <li>Podcast sepak bola</li>
+        <li>Analisis berbasis data modern</li>
+      </ul>
+      <p>Inovasi tersebut akan membuat pengalaman penggemar sepak bola menjadi semakin menarik dan informatif.</p>
+
+      <h3>Kesimpulan</h3>s
+      <p>Sepak bola telah menjadi bagian penting dari kehidupan masyarakat Indonesia. Tingginya minat terhadap olahraga ini membuat kebutuhan akan berita bola Indonesia, prediksi bola Indonesia, dan artikel bola Indonesia terus meningkat setiap tahun.</p>
+      <p>Sebagai platform olahraga terpercaya, 7755 Sports iD berhasil memenuhi kebutuhan tersebut dengan menghadirkan informasi yang cepat, akurat, dan berkualitas. Mulai dari berita pertandingan, transfer pemain, analisis taktik, hingga prediksi sepak bola Indonesia, semuanya tersedia secara lengkap dalam satu tempat.</p>
+      <p>Bagi para penggemar sepak bola yang ingin selalu update dengan perkembangan terbaru dunia sepak bola nasional dan internasional, 7755 Sports iD adalah pilihan terbaik untuk mendapatkan informasi terpercaya setiap hari.</p>
+    </article>
+
+  </div><!-- /container -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxMigAgPMFLsjO4JeynWw2nKkH9w8nV-WOptkplXVv2RozfPIvsWc2sj_QfqAnYygSp0JmcSml5UbAV2vrLZenOnv4-lYEiA3NSlR8WLBYeK6BcgkPgpR3yAJuxBH_XAuM7ZJC7V-Jkc6rGY4vO0zbUb25Njpa1OBlpJo074KSyVE0UylAgYRRP9yYdCY/s1600/a.png" alt="7755 Sports iD">
+          <p>Portal berita sepak bola Indonesia terpercaya. Menyajikan informasi Liga 1, Timnas, transfer pemain, dan prediksi pertandingan setiap hari.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul>
+            <li><a href="#">Liga 1 Indonesia</a></li>
+            <li><a href="#">Timnas Indonesia</a></li>
+            <li><a href="#">Transfer Pemain</a></li>
+            <li><a href="#">Prediksi Bola</a></li>
+            <li><a href="#">Liga Internasional</a></li>
+            <li><a href="#">Analisis Taktik</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tentang Kami</h4>
+          <ul>
+            <li><a href="#">Tentang 7755 Sports iD</a></li>
+            <li><a href="#">Redaksi</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Kontak Kami</a></li>
+            <li><a href="#">Pasang Iklan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 7755 Sports iD. Seluruh hak cipta dilindungi undang-undang.</p>
+        <div class="footer-badge">
+          <span>Liga 1</span>
+          <span>Timnas</span>
+          <span>Prediksi</span>
+          <span>Transfer</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
